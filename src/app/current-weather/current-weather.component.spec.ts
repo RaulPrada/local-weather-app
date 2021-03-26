@@ -1,11 +1,11 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing'
-import { By } from '@angular/platform-browser'
-import { injectSpy } from 'angular-unit-test-helper'
-import { of } from 'rxjs'
 
+import { By } from '@angular/platform-browser'
+import { CurrentWeatherComponent } from './current-weather.component'
 import { WeatherService } from '../weather/weather.service'
 import { fakeWeather } from '../weather/weather.service.fake'
-import { CurrentWeatherComponent } from './current-weather.component'
+import { injectSpy } from 'angular-unit-test-helper'
+import { of } from 'rxjs'
 
 describe('CurrentWeatherComponent', () => {
   let component: CurrentWeatherComponent
@@ -65,12 +65,12 @@ describe('CurrentWeatherComponent', () => {
 
     // Assert
     expect(component.current).toBeDefined()
-    expect(component.current.city).toEqual('Bethesda')
+    expect(component.current.city).toEqual('Barcelona')
     expect(component.current.temperature).toEqual(280.32)
 
     // Assert on DOM
     const debugEl = fixture.debugElement
     const titleEl: HTMLElement = debugEl.query(By.css('span')).nativeElement
-    expect(titleEl.textContent).toContain('Bethesda')
+    expect(titleEl.textContent).toContain('Barcelona')
   })
 })
