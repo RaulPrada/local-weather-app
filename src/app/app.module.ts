@@ -5,10 +5,11 @@ import { CurrentWeatherComponent } from './current-weather/current-weather.compo
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { MaterialModule } from './material.module';
 
 @NgModule({
   declarations: [AppComponent, CurrentWeatherComponent],
-  imports: [BrowserModule, HttpClientModule, BrowserAnimationsModule, FlexLayoutModule],
+  imports: [BrowserModule, HttpClientModule, BrowserAnimationsModule, FlexLayoutModule, MaterialModule],
   providers: [],
   bootstrap: [AppComponent],
 })
